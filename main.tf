@@ -17,12 +17,12 @@ resource "aws_rds_cluster_parameter_group" "default" {
   description = "RDS default cluster parameter group"
 }
 
-//resource "aws_db_subnet_group" "default" {
-//  name       = "${var.env}-${var.name}-roboshop-rds"
-//  subnet_ids = var.subnets
-//
-//  tags = {
-//    Name = "${var.env}-${var.name}-roboshop-rds"
-//  }
-//}
+resource "aws_db_subnet_group" "default" {
+  name       = "${var.env}-${var.name}-roboshop-rds"
+  subnet_ids = var.subnets
+
+  tags = {
+    Name = "${var.env}-${var.name}-roboshop-rds"
+  }
+}
 
